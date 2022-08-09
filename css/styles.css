@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+header {
+    height: 64px;
+    background-color: #004884;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+}
+
+header .headervacuna{
+    height: 54px;
+    margin-left: 15px;
+    margin-bottom: 2px;
+}
+
+header .headermilogo{
+    height: 50px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+header .headermilogo:hover {
+    transform: scale(1.1);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "greetings yourdata" ;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 30px;
+    margin-top: 20px;
+}
+
+.container .greetings { 
+    grid-area: greetings;
+    width: 67%;
+    justify-self: end;
+    margin-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.container .greetings img {
+    width: 280px;
+    margin-top:50px;
+}
+
+.container .greetings h4 {
+    padding: 50px 15px ;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+}
+
+.greetings button {
+    margin-top: 20px;
+    padding: 6px 12px;
+    border: 1px solid rgb(204, 204, 204);
+    background-color: inherit;
+    border-radius: 4px;
+    width: 95%;
+    height: 34px;
+    cursor: pointer;
+}
+
+.greetings button:hover {
+    border-color: #adadad;
+}
+
+.container .yourdata {
+    grid-area: yourdata;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: 1px solid #E2ECFD;
+    justify-self: start;
+    width: 70%;
+    border-radius: 3px;
+}
+
+.yourdata h4 {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: rgb(103, 34, 176);
+    border-bottom:1px solid #E2ECFD;
+}
+
+label, option, select {
+    display: block;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #063E63;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+select, input {
+    height: 30px;
+    padding: 6px 12px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+select:focus, input:focus {
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+}
+
+select:active, input:active {
+    border: none;
+}
+
+.calendar {
+    position: relative;
+}
+
+.calendar .cal-icon{
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border-top-right-radius: 4px ;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #ccc;
+    height: 95%;
+}
+
+.calendar .inpt::placeholder {
+    opacity: 0;
+}
+
+.calendar .inpt:hover::placeholder {
+    opacity: 1;
+}
+
+.form-footer {
+    margin-top: 30px;
+    border-top: 1px solid rgb(238, 238, 238);
+    display: grid;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(238, 238, 238); ;
+}
+
+.form-footer img {
+    padding-top: 20px;
+    display: block;
+    width: 90%;
+    justify-self: center;
+}
+
+.form-footer a {
+    color: #337ab7;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    justify-self: center;
+}
+
+.form-footer a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.form-footer p {
+    font-size: 14px;
+    justify-self: center;
+}
+
+.form-footer .captcha {
+    border: 1px solid rgb(118, 118, 118);
+    height: 26px;
+    border-radius: 2px;
+    width: 90%;
+    justify-self: center;
+}
+
+form .btn {
+    width: 100%;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    font-weight: 400;
+    text-align: center;
+    padding: 6px;
+    border-radius: 4px;
+    color: white;
+    margin: 20px 0  ;
+}
+
+form .btn:hover{
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-color: #004884;
+    background-color: #004884;
+    border-top-style: solid;
+    color: #fff;
+    height: 75px;
+    margin-bottom: 20px;
+}
+
+footer p{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width:992px) {
+    .container {
+        grid-template-areas: 
+        'greetings greetings'
+        'yourdata yourdata';
+    }
+    .greetings, .yourdata {
+        justify-self: center !important;
+    }
+    .yourdata {
+        margin-top: 50px;
+    }
+    
+}
